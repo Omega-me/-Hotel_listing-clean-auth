@@ -4,10 +4,11 @@
 /// </summary>
 using Hotel_listing.Domain.Entitites;
 using Hotel_listing.Persistence.Configurations.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_listing.Persistence;
-public partial class DatabaseContext : DbContext
+public partial class DatabaseContext : IdentityDbContext<AppUser>
 {
     public DatabaseContext(DbContextOptions options):base(options)
     { }
